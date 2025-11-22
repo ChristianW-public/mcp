@@ -30,7 +30,7 @@ public class CodingGuidelineService {
      * 
      * @return Liste aller CodingGuideline-Objekte
      */
-    @Tool(name = "get_coding_guidelines", description = "Get a list of coding_guideline from the collection")
+    @Tool(name = "get_coding_guidelines", description = "Get a list of coding_guidelines from the collection")
     public List<CodingGuideline> getCodingGuideline() {
         // Command-Objekt erstellen und ausführen
         GuidelineCommand<List<CodingGuideline>> command = new GetAllGuidelinesCommand();
@@ -46,7 +46,7 @@ public class CodingGuidelineService {
      * @param language Name der Programmiersprache (z.B. "java", "python")
      * @return CodingGuideline für die angegebene Sprache, oder null wenn nicht gefunden
      */
-    @Tool(name = "get_coding_guideline", description = "Get a single coding_guideline from from the collection by programming language")
+    @Tool(name = "get_coding_guideline", description = "Get a single coding_guideline from the collection by programming language")
     public CodingGuideline getCodingGuideline(String language) {
         // Command-Objekt mit Sprach-Parameter erstellen und ausführen
         GuidelineCommand<CodingGuideline> command = new GetGuidelineByLanguageCommand(language);
